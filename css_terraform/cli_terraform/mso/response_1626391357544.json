@@ -1,0 +1,36 @@
+{
+  "sites": [
+    {
+      "id": "6099cc3f2f000066028a4ef0",
+      "name": "SanFrancisco",
+      "urls": [
+        "https://14.2.172.141"
+      ],
+      "username": "admin",
+      "password": "******",
+      "apicSiteId": "1",
+      "labels": [],
+      "passwordEncryptionStatus": true,
+      "platform": "on-premise",
+      "apicVersion": "4.2(3j)",
+      "_updateVersion": 140,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "6099cc582f000081028a4ef1",
+      "name": "NewYork",
+      "urls": [
+        "https://14.2.172.142"
+      ],
+      "username": "admin",
+      "password": "******",
+      "apicSiteId": "2",
+      "labels": [],
+      "passwordEncryptionStatus": true,
+      "platform": "on-premise",
+      "apicVersion": "4.2(3j)",
+      "_updateVersion": 48,
+      "_versionDefaulted": false
+    }
+  ]
+}

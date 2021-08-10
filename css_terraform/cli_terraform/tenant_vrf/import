@@ -1,0 +1,22 @@
+# aci_tenant.tenant_tf:
+resource "aci_tenant" "tenant_tf" {
+    annotation = "orchestrator:terraform"
+    id         = "uni/tn-dm_terraform_tenant_vrf_only"
+    name       = "dm_terraform_tenant_vrf_only"
+}
+
+# aci_vrf.vrf_tf:
+resource "aci_vrf" "vrf_tf" {
+    annotation             = "orchestrator:terraform"
+    bd_enforced_enable     = "no"
+    id                     = "uni/tn-dm_terraform_tenant_vrf_only/ctx-Prod_vrf"
+    ip_data_plane_learning = "enabled"
+    knw_mcast_act          = "permit"
+    name                   = "Prod_vrf"
+    pc_enf_dir             = "ingress"
+    pc_enf_pref            = "enforced"
+    tenant_dn              = "uni/tn-dm_terraform_tenant_vrf_only"
+}
+
+terraform import aci_tenant.tenant_tf uni/tn-dm_terraform_tenant_vrf_only
+terraform import aci_vrf.vrf_tf uni/tn-dm_terraform_tenant_vrf_only/ctx-Prod_vrf
